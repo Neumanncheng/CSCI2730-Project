@@ -8,12 +8,19 @@ contract market {
     address payable private owner;
 
     struct Product {
+        //Products id
         uint id;
+        //Product name
         string name;
-        string description; // Corrected spelling
+        //Product discription
+        string description;
+        //Time when upload/buy
         uint timestamp;
-        uint price; // Consider using uint256
+        //Price in wei
+        uint price;
+        //Seller address
         address payable seller;
+        //Product status
         bool purchased;
     }
 
@@ -43,7 +50,7 @@ contract market {
     function uploadProduct(
         string memory _name,
         uint _price,
-        string memory _description // Corrected spelling
+        string memory _description
     ) public {
         require(bytes(_name).length > 0, "Invalid name");
         require(_price > 0, "Price must be greater than 0");
@@ -86,7 +93,7 @@ contract market {
         emit ProductPurchased(
             _product.id,
             _product.name,
-            _product.description, // Corrected spelling
+            _product.description,
             block.timestamp,
             _product.price,
             _product.seller
