@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+# MarketProject
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project is a market that user can sell and buy product
+Use metamask for transaction
+Connect the smart contract to fontend by using hardhat and web3.js
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+In the future, I may add upload image function by add a string field imageUrl in product structure in the contract 
